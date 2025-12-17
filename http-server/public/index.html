@@ -5,9 +5,48 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML Document</title>
+  <title>HTTP Server with Query Parameters</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>HTML Document</h1>
+  <h1>HTTP Server with Query Parameters Support</h1>
+  
+  <div class="links">
+    <h2>Static Pages:</h2>
+    <ul>
+      <li><a href="/index.html">Main Page</a></li>
+      <li><a href="/classic.html">Classic (dynamic time)</a></li>
+      <li><a href="/forms.html">Forms</a></li>
+      <li><a href="/links.html">Links</a></li>
+      <li><a href="/events.html">Events</a></li>
+      <li><a href="/resources.html">Resources</a></li>
+    </ul>
+    
+    <h2>Query Parameters Demo:</h2>
+    <ul>
+      <li><a href="/messages.html">Messages Demo Page</a></li>
+      <li><a href="/messages">/messages (all)</a></li>
+      <li><a href="/messages?last=5">/messages?last=5</a></li>
+      <li><a href="/messages?last=10&sort=desc">/messages?last=10&sort=desc</a></li>
+      <li><a href="/messages?filter=unread&category=work">/messages?filter=unread&category=work</a></li>
+    </ul>
+    
+    <h2>Other Resources:</h2>
+    <ul>
+      <li><a href="/styles.css">CSS Styles</a></li>
+      <li><a href="/app.js">JavaScript</a></li>
+      <li><a href="/spring.svg">SVG Image</a></li>
+      <li><a href="/spring.png">PNG Image</a></li>
+    </ul>
+  </div>
+  
+  <div class="info">
+    <h3>About Query Parameters:</h3>
+    <p>The server now supports parsing query parameters from URLs.</p>
+    <p>Example: <code>/messages?last=10&sort=asc</code></p>
+    <p>Parameters are accessible via: <code>request.getQueryParam("last")</code></p>
+  </div>
+  
+  <script src="app.js"></script>
 </body>
 </html>
