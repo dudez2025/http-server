@@ -3,7 +3,7 @@ package ru.netology.servlet;
 import com.google.gson.Gson;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ru.netology.config.AnnotationAppConfig;
+import ru.netology.config.JavaAppConfig;
 import ru.netology.controller.PostController;
 import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
@@ -19,11 +19,11 @@ public class PostServlet extends HttpServlet {
     
     @Override
     public void init() {
-        // Spring Annotation Config
-        ApplicationContext context = new AnnotationConfigApplicationContext(AnnotationAppConfig.class);
+        // Spring Java Config
+        ApplicationContext context = new AnnotationConfigApplicationContext(JavaAppConfig.class);
         controller = context.getBean(PostController.class);
         gson = new Gson();
-        System.out.println("PostServlet initialized with Annotation Config");
+        System.out.println("PostServlet initialized with Java Config");
     }
     
     @Override
