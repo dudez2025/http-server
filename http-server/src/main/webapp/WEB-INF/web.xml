@@ -5,7 +5,7 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     
-    <display-name>Spring DI Annotation Config</display-name>
+    <display-name>Spring DI Java Config</display-name>
     
     <servlet>
         <servlet-name>postServlet</servlet-name>
